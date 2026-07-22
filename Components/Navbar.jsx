@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import logo from "@/public/logo.png";
+import Container from "@/Components/Container";
 
 const navItems = ["about us", "our work", "our clients", "our team", "contact us"];
 
@@ -51,8 +52,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="relative z-50 bg-black px-5 py-4 sm:px-7 lg:px-10 lg:pb-0 lg:pt-8">
-      <div className="flex items-center justify-between">
+    <nav className="relative z-50 bg-black py-4 lg:pb-0 lg:pt-8">
+      <Container className="flex items-center justify-between">
         <Link href="/" aria-label="Mindspace home" className="shrink-0">
           <Image
             src={logo}
@@ -109,7 +110,7 @@ export default function Navbar() {
             }`}
           />
         </button>
-      </div>
+      </Container>
 
       {menuOpen && (
         <div

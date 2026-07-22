@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Container from "@/Components/Container";
 
 export default function ProjectsGrid() {
   const [projects, setProjects] = useState([]);
@@ -28,8 +29,8 @@ export default function ProjectsGrid() {
   }, []);
 
   return (
-    <section className="w-full bg-black px-6 py-16 sm:px-8 md:px-12 md:py-20">
-      <div className="mx-auto max-w-6xl">
+    <section className="w-full bg-black py-16 md:py-20">
+      <Container>
         {loading && (
           <p className="text-center text-sm text-white/60">Loading projects…</p>
         )}
@@ -74,7 +75,7 @@ export default function ProjectsGrid() {
             </article>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

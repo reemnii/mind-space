@@ -1,5 +1,6 @@
 import Image from "next/image";
 import sticker from "@/public/sticker.png";
+import Container from "@/Components/Container";
 
 const contactDots = [
   { left: 3, top: 18, size: 2, color: "#ffffff", opacity: 0.35 },
@@ -35,6 +36,7 @@ const contactDots = [
 export default function Contact() {
   return (
     <section className="relative w-full bg-black py-20 sm:py-28 overflow-hidden">
+      <Container>
       {/* top accent line */}
       <div className="mx-auto mb-7 flex h-[3px] items-center justify-center gap-2 sm:mb-8">
         <span className="flex h-full overflow-hidden rounded-full">
@@ -147,6 +149,7 @@ export default function Contact() {
           </span>
         </div>
       </div>
+      </Container>
     </section>
   );
 }

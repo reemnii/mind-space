@@ -1,7 +1,9 @@
+import Container from "@/Components/Container";
+
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-black px-3 py-20 sm:px-5 sm:py-24">
-      <div className="relative mx-auto flex min-h-[520px] max-w-5xl flex-col items-center justify-center text-center sm:min-h-[580px] md:min-h-[60vh]">
+    <section className="relative w-full overflow-hidden bg-black py-8 sm:py-10 md:py-24">
+      <Container className="relative flex min-h-[clamp(300px,58vw,420px)] flex-col items-center justify-center text-center md:min-h-[60vh]">
       
         {/* Circle with diagonal stripes */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
@@ -88,7 +90,7 @@ export default function Hero() {
             </span>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

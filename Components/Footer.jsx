@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Container from "@/Components/Container";
 
 const sitemapLinks = [
   ["about us", "/about-us"],
@@ -24,7 +25,8 @@ export default function Footer() {
       </div>
 
       <div className="bg-[#ff414d] text-white">
-        <div className="mx-auto max-w-[760px] px-5 pb-9 pt-10 lg:px-0">
+        <Container>
+        <div className="mx-auto max-w-[760px] pb-9 pt-10">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-[110px_1fr_190px] md:gap-8">
             <div>
               <h4 className="mb-5 text-xs font-normal leading-none">sitemap</h4>
@@ -108,6 +110,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        </Container>
       </div>
     </footer>
   );
