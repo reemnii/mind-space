@@ -28,7 +28,7 @@ export default function ProjectsGrid() {
   }, []);
 
   return (
-    <section className="w-full bg-black px-4 py-16 md:px-12 md:py-20">
+    <section className="w-full bg-black px-6 py-16 sm:px-8 md:px-12 md:py-20">
       <div className="mx-auto max-w-6xl">
         {loading && (
           <p className="text-center text-sm text-white/60">Loading projects…</p>

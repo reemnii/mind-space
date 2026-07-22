@@ -1,14 +1,11 @@
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-black px-4 py-16 md:py-24">
-      <div className="relative mx-auto flex min-h-[50vh] max-w-5xl flex-col items-center justify-center text-center">
-        {/* Decorative circle top-right */}
-      <div className="absolute top-100 right-16 w-24 h-24 rounded-full border border-white/40 flex items-center justify-center">
-        <div className="w-3 h-3 rounded-full bg-white" />
-      </div>
+    <section className="relative w-full overflow-hidden bg-black px-3 py-20 sm:px-5 sm:py-24">
+      <div className="relative mx-auto flex min-h-[520px] max-w-5xl flex-col items-center justify-center text-center sm:min-h-[580px] md:min-h-[60vh]">
+      
         {/* Circle with diagonal stripes */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div className="relative h-[120px] w-[120px] md:h-[420px] md:w-[420px]">
+          <div className="relative h-[clamp(260px,58vw,420px)] w-[clamp(260px,58vw,420px)]">
             {/* Striped fill */}
             <div className="absolute inset-0 -translate-x-[8%] translate-y-[12%] overflow-hidden rounded-full">
               <div
@@ -58,36 +55,36 @@ export default function Hero() {
         </div>
 
         {/* Text content */}
-        <div className="relative z-10 w-full max-w-4xl px-4">
+        <div className="relative z-10 w-full max-w-4xl px-1 sm:px-4">
 
-          <h1 className="font-[family-name:var(--font-inter)] font-thin leading-[1.15] text-xl tracking-[-0.035em] text-white">
-            <span className="block text-4xl sm:text-5xl md:text-6xl">here&rsquo;s a quick peek</span>
-            <span className="block text-4xl sm:text-5xl md:text-6xl">at our recent work.</span>
-            <span className="block text-4xl sm:text-5xl md:text-6xl">what&rsquo;s coming next is</span>
+          <h1 className="font-[family-name:var(--font-inter)] text-[clamp(2rem,8.5vw,3.75rem)] font-thin leading-[1.15] tracking-[-0.035em] text-white">
+            <span className="block">here&rsquo;s a quick peek</span>
+            <span className="block">at our recent work.</span>
+            <span className="block">what&rsquo;s coming next is</span>
           </h1>
 
 
-          <div className="mt-8 flex items-center justify-center gap-3 md:mt-12">
+          <div className="mt-8 flex w-full items-center justify-center gap-2 sm:gap-3 md:mt-12">
             <span
               aria-hidden="true"
-              className="flex h-[3px] w-15 shrink-0 overflow-hidden rounded-sm shadow-[0_0_4px_rgba(0,217,255,0.65)] md:w-28 mt-10"
+              className="mt-6 flex h-[3px] min-w-6 max-w-28 flex-1 overflow-hidden rounded-full shadow-[0_0_4px_rgba(0,217,255,0.65)] sm:mt-10"
             >
               <span className="block h-full w-3/4 bg-[#00d9ff]" />
               <span className="block h-full w-1/4 bg-[#ff4a5c]" />
             </span>
 
-            <h2 className="whitespace-nowrap font-[family-name:var(--font-inter)] text-4xl font-extrabold tracking-[-0.045em] md:text-6xl lg:text-7xl">
+            <h2 className="whitespace-nowrap font-[family-name:var(--font-inter)] text-[clamp(2rem,8vw,4.5rem)] font-extrabold leading-none tracking-[-0.045em]">
               <span className="text-[#ff4a5c] ">even</span>{" "}
               <span className="text-white">greater</span>
             </h2>
 
             <span
               aria-hidden="true"
-              className="flex h-[3px] w-15 shrink-0 overflow-hidden rounded-sm md:w-28 shadow mt-10"
+              className="mt-6 flex h-[3px] min-w-6 max-w-28 flex-1 overflow-hidden rounded-full shadow sm:mt-10"
             >
-              <span className="block w-12 bg-[#ff4a5c] shadow-[0_0_4px_rgba(255,74,92,0.55)] md:w-16" />
-              <span className="block w-3 rounded-r-sm bg-[#00d9ff] shadow-[0_0_4px_rgba(0,217,255,0.55)]  md:w-4" />
-              <span className="ml-2 block w-9 rounded-full bg-[#00d9ff] shadow-[0_0_4px_rgba(0,217,255,0.55)] md:w-12" />
+              <span className="block w-[55%] bg-[#ff4a5c] shadow-[0_0_4px_rgba(255,74,92,0.55)]" />
+              <span className="block w-[14%] bg-[#00d9ff] shadow-[0_0_4px_rgba(0,217,255,0.55)]" />
+              <span className="ml-2 block flex-1 rounded-full bg-[#00d9ff] shadow-[0_0_4px_rgba(0,217,255,0.55)]" />
             </span>
           </div>
         </div>
