@@ -72,12 +72,12 @@ export default function ProjectsGrid() {
   }, []);
 
   return (
-    <section id="movies" className="w-full bg-black py-16 md:py-20">
+    <section id="work" className="w-full bg-black py-16 md:py-20">
       <Container>
         <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between md:mb-12">
           <div className="w-full sm:max-w-md">
             <label htmlFor="project-search" className="sr-only">
-              Search movies
+              Search projects
             </label>
             <div className="relative">
               <svg
@@ -99,7 +99,7 @@ export default function ProjectsGrid() {
                   setSearchQuery(event.target.value);
                   setVisibleCount(PROJECTS_PER_PAGE);
                 }}
-                placeholder="Search movies..."
+                placeholder="Search our work..."
                 autoComplete="off"
                 className="w-full rounded-lg border border-white/15 bg-white/[0.06] py-3.5 pl-12 pr-5 text-sm text-white outline-none transition placeholder:text-white/40 hover:border-white/25 focus:border-white/50 focus:bg-white/[0.09] focus:ring-2 focus:ring-white/10"
               />
@@ -108,7 +108,7 @@ export default function ProjectsGrid() {
 
           <div className="relative w-full sm:w-52">
             <label htmlFor="project-sort" className="sr-only">
-              Sort movies
+              Sort projects
             </label>
             <select
               id="project-sort"
@@ -138,7 +138,7 @@ export default function ProjectsGrid() {
         </div>
 
         {loading && (
-          <p className="text-center text-sm text-white/60">Loading movies…</p>
+          <p className="text-center text-sm text-white/60">Loading projects…</p>
         )}
         {error && (
           <p className="text-center text-sm text-red-400">{error}</p>
@@ -184,7 +184,7 @@ export default function ProjectsGrid() {
 
         {!loading && !error && filteredProjects.length === 0 && (
           <p className="py-16 text-center text-sm text-white/60">
-            No movies found for &ldquo;{searchQuery.trim()}&rdquo;.
+            No projects found for &ldquo;{searchQuery.trim()}&rdquo;.
           </p>
         )}
 

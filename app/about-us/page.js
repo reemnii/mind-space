@@ -28,12 +28,12 @@ export async function generateMetadata() {
     const page = await getOurStory();
 
     return {
-      title: page?.seo_title || page?.title || "Our Story",
+      title: "Our Story | Hanzo Films",
       description: page?.seo_description || undefined,
     };
   } catch {
     return {
-      title: "Our Story | Cineora",
+      title: "Our Story | Hanzo Films",
       description: "Discover the story, clients, and awards behind the work.",
     };
   }
@@ -138,11 +138,9 @@ export default async function AboutUsPage() {
                   className="space-y-5 text-base leading-8 text-white/68 [&_br]:block [&_br]:mb-5"
                   dangerouslySetInnerHTML={{ __html: story.details.text }}
                 />
-                {story.details.cta_text && story.details.cta_link && (
+                {story.details.cta_text && (
                   <a
-                    href={story.details.cta_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/#work"
                     className="mt-9 inline-flex rounded-lg bg-[#ff414d] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#ff5b66]"
                   >
                     {story.details.cta_text}
@@ -156,16 +154,14 @@ export default async function AboutUsPage() {
         {clients.length > 0 && (
           <section className="overflow-hidden border-b border-white/10 py-20 sm:py-28">
             <Container>
-              <div className="mb-12 flex items-end justify-between gap-6">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.32em] text-cyan-400">
-                    Trusted by
-                  </p>
-                  <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">
-                    Clients
-                  </h2>
-                </div>
-                <p className="hidden max-w-xs text-right text-sm leading-6 text-white/50 sm:block">
+              <div className="mx-auto mb-12 max-w-2xl text-center">
+                <p className="text-xs font-bold uppercase tracking-[0.32em] text-cyan-400">
+                  Trusted by
+                </p>
+                <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">
+                  Clients
+                </h2>
+                <p className="mt-5 text-sm leading-6 text-white/55">
                   Global brands brought together by ambitious ideas and memorable
                   storytelling.
                 </p>

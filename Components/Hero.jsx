@@ -60,9 +60,9 @@ export default function Hero() {
         <div className="relative z-10 w-full max-w-4xl px-1 sm:px-4">
 
           <h1 className="font-[family-name:var(--font-inter)] text-[clamp(2rem,8.5vw,3.75rem)] font-thin leading-[1.15] tracking-[-0.035em] text-white">
-            <span className="block">your next favorite story</span>
-            <span className="block">is waiting to be discovered.</span>
-            <span className="block">press play on something</span>
+            <span className="block">we turn bold ideas</span>
+            <span className="block">into unforgettable films.</span>
+            <span className="block">where dreams come</span>
           </h1>
 
 
@@ -76,8 +76,8 @@ export default function Hero() {
             </span>
 
             <h2 className="whitespace-nowrap font-[family-name:var(--font-inter)] text-[clamp(2rem,8vw,4.5rem)] font-extrabold leading-none tracking-[-0.045em]">
-              <span className="text-[#ff4a5c] ">worth</span>{" "}
-              <span className="text-white">watching</span>
+              <span className="text-[#ff4a5c] ">to</span>{" "}
+              <span className="text-white">life</span>
             </h2>
 
             <span

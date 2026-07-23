@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Cineora | Movies worth watching",
+  title: "Hanzo Films | Production House & Animation Studio",
   description:
-    "Discover standout films, fresh releases, and stories worth watching on Cineora.",
+    "Hanzo Films is an award-winning production house and animation studio based in Dubai, Mumbai, and Singapore.",
 };
 
 export default function RootLayout({ children }) {

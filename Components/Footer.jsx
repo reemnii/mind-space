@@ -2,20 +2,14 @@ import Link from "next/link";
 import Container from "@/Components/Container";
 
 const sitemapLinks = [
-  ["browse movies", "/movies"],
-  ["new releases", "/new-releases"],
-  ["collections", "/collections"],
-  ["my watchlist", "/watchlist"],
-  ["help center", "/help"],
+  ["home", "/"],
+  ["our work", "/#work"],
+  ["our story", "/about-us"],
+  ["news", "https://hanzofilms.com/blogs"],
+  ["contact", "/#contact"],
 ];
 
-const genres = [
-  "action",
-  "drama",
-  "documentary",
-  "comedy",
-  "animation",
-];
+const locations = ["Dubai, UAE", "Mumbai, India", "Singapore"];
 
 export default function Footer() {
   return (
@@ -42,33 +36,38 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="mb-5 text-xs font-normal leading-none">genres</h4>
+              <h4 className="mb-5 text-xs font-normal leading-none">locations</h4>
               <ul className="text-[10px] font-bold leading-4">
-                {genres.map((genre) => (
-                  <li key={genre}>{genre}</li>
+                {locations.map((location) => (
+                  <li key={location}>{location}</li>
                 ))}
               </ul>
             </div>
 
             <div className="col-span-2 md:col-span-1">
-              <h4 className="mb-5 text-xs font-normal leading-none">support</h4>
-              <a
-                href="mailto:hello@cineora.tv"
-                className="text-[10px] font-bold leading-4 hover:underline"
-              >
-                hello@cineora.tv
-              </a>
+              <h4 className="mb-5 text-xs font-normal leading-none">contact</h4>
+              <div className="flex flex-col text-[10px] font-bold leading-4">
+                <a href="tel:+971529360566" className="hover:underline">
+                  +971 52 936 0566
+                </a>
+                <a
+                  href="mailto:nasneen@hanzofilms.com"
+                  className="hover:underline"
+                >
+                  nasneen@hanzofilms.com
+                </a>
+              </div>
             </div>
           </div>
 
           <div className="mt-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <div className="flex items-center gap-3">
               <span className="flex items-start text-2xl font-extrabold leading-none tracking-[-0.055em]">
-                cineora
+                Hanzo<span className="text-cyan-300">Films</span>
               </span>
               <span className="h-5 w-px bg-white" />
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/hanzofilms/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -89,7 +88,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/hanzo-films/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

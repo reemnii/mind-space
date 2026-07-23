@@ -6,10 +6,10 @@ import { useState } from "react";
 import Container from "@/Components/Container";
 
 const navItems = [
-  { label: "about us", href: "/about-us" },
-  { label: "movies", href: "/#movies" },
-  { label: "collections", href: "/#movies" },
-  { label: "new releases", href: "/#movies" },
+  { label: "our story", href: "/about-us" },
+  { label: "our work", href: "/#work" },
+  { label: "news", href: "https://hanzofilms.com/blogs" },
+  { label: "directors", href: "https://hanzofilms.com/directors" },
   { label: "contact", href: "/#contact" },
 ];
 
@@ -62,7 +62,7 @@ export default function Navbar() {
       <Container className="flex items-center justify-between">
         <Link
           href="/"
-          aria-label="Cineora home"
+          aria-label="Hanzo Films home"
           className="flex shrink-0 items-center gap-2 text-xl font-extrabold tracking-[-0.04em] text-white sm:text-2xl"
         >
           <span className="grid h-9 w-9 place-items-center rounded-full border border-cyan-400 text-cyan-400">
@@ -70,18 +70,20 @@ export default function Navbar() {
               aria-hidden="true"
               viewBox="0 0 24 24"
               className="ml-0.5 h-4 w-4 fill-current"
-            >
-              <path d="M8 5v14l11-7z" />
-            </svg>
+          >
+            <path d="M8 5v14l11-7z" />
+          </svg>
           </span>
-          cineora
+          <span>
+            Hanzo<span className="text-cyan-400">Films</span>
+          </span>
         </Link>
 
         <div className="hidden items-center gap-8 text-sm text-white lg:flex">
           {navItems.map(({ label, href }) => {
             const isActive =
-              (pathname === "/about-us" && label === "about us") ||
-              (pathname === "/" && label === "movies");
+              (pathname === "/about-us" && label === "our story") ||
+              (pathname === "/" && label === "our work");
 
             return (
             <Link
@@ -137,8 +139,8 @@ export default function Navbar() {
           <div className="flex flex-col items-start gap-4 text-base text-white">
             {navItems.map(({ label, href }) => {
               const isActive =
-                (pathname === "/about-us" && label === "about us") ||
-                (pathname === "/" && label === "movies");
+                (pathname === "/about-us" && label === "our story") ||
+                (pathname === "/" && label === "our work");
 
               return (
               <Link
