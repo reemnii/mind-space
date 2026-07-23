@@ -2,19 +2,19 @@ import Link from "next/link";
 import Container from "@/Components/Container";
 
 const sitemapLinks = [
-  ["about us", "/about-us"],
-  ["our work", "/our-work"],
-  ["our clients", "/our-clients"],
-  ["our team", "/our-team"],
-  ["contact us", "/contact-us"],
+  ["browse movies", "/movies"],
+  ["new releases", "/new-releases"],
+  ["collections", "/collections"],
+  ["my watchlist", "/watchlist"],
+  ["help center", "/help"],
 ];
 
-const offices = [
-  "dubai, UAE",
-  "beirut, LEBANON",
-  "paris, FRANCE",
-  "cairo, EGYPT",
-  "riyadh, KSA",
+const genres = [
+  "action",
+  "drama",
+  "documentary",
+  "comedy",
+  "animation",
 ];
 
 export default function Footer() {
@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="mx-auto max-w-[760px] pb-9 pt-10">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-[110px_1fr_190px] md:gap-8">
             <div>
-              <h4 className="mb-5 text-xs font-normal leading-none">sitemap</h4>
+              <h4 className="mb-5 text-xs font-normal leading-none">explore</h4>
               <ul className="text-[10px] font-bold leading-4">
                 {sitemapLinks.map(([label, href]) => (
                   <li key={href}>
@@ -42,21 +42,21 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="mb-5 text-xs font-normal leading-none">offices</h4>
+              <h4 className="mb-5 text-xs font-normal leading-none">genres</h4>
               <ul className="text-[10px] font-bold leading-4">
-                {offices.map((office) => (
-                  <li key={office}>{office}</li>
+                {genres.map((genre) => (
+                  <li key={genre}>{genre}</li>
                 ))}
               </ul>
             </div>
 
             <div className="col-span-2 md:col-span-1">
-              <h4 className="mb-5 text-xs font-normal leading-none">inquiries</h4>
+              <h4 className="mb-5 text-xs font-normal leading-none">support</h4>
               <a
-                href="mailto:briefme@mindspace-me.com"
+                href="mailto:hello@cineora.tv"
                 className="text-[10px] font-bold leading-4 hover:underline"
               >
-                briefme@mindspace-me.com
+                hello@cineora.tv
               </a>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function Footer() {
           <div className="mt-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <div className="flex items-center gap-3">
               <span className="flex items-start text-2xl font-extrabold leading-none tracking-[-0.055em]">
-                mindspace<sup className="ml-0.5 text-[9px] font-bold leading-none">°</sup>
+                cineora
               </span>
               <span className="h-5 w-px bg-white" />
               <a

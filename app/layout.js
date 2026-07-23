@@ -18,7 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "MindSpace",
+  title: "Cineora | Movies worth watching",
+  description:
+    "Discover standout films, fresh releases, and stories worth watching on Cineora.",
 };
 
 export default function RootLayout({ children }) {

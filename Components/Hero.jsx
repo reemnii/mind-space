@@ -60,9 +60,9 @@ export default function Hero() {
         <div className="relative z-10 w-full max-w-4xl px-1 sm:px-4">
 
           <h1 className="font-[family-name:var(--font-inter)] text-[clamp(2rem,8.5vw,3.75rem)] font-thin leading-[1.15] tracking-[-0.035em] text-white">
-            <span className="block">here&rsquo;s a quick peek</span>
-            <span className="block">at our recent work.</span>
-            <span className="block">what&rsquo;s coming next is</span>
+            <span className="block">your next favorite story</span>
+            <span className="block">is waiting to be discovered.</span>
+            <span className="block">press play on something</span>
           </h1>
 
 
@@ -76,8 +76,8 @@ export default function Hero() {
             </span>
 
             <h2 className="whitespace-nowrap font-[family-name:var(--font-inter)] text-[clamp(2rem,8vw,4.5rem)] font-extrabold leading-none tracking-[-0.045em]">
-              <span className="text-[#ff4a5c] ">even</span>{" "}
-              <span className="text-white">greater</span>
+              <span className="text-[#ff4a5c] ">worth</span>{" "}
+              <span className="text-white">watching</span>
             </h2>
 
             <span

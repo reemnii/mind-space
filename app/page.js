@@ -1,4 +1,3 @@
-import Banner from "@/Components/Banner";
 import Navbar from "@/Components/Navbar";
 import Hero from "@/Components/Hero";
 import ProjectsGrid from "@/Components/ProjectsGrid";
@@ -8,7 +7,6 @@ import Footer from "@/Components/Footer";
 export default function Home() {
   return (
     <div>
-      <Banner />
       <Navbar />
       <Hero />
       <ProjectsGrid />

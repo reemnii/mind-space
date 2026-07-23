@@ -1,12 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import logo from "@/public/logo.png";
 import Container from "@/Components/Container";
 
-const navItems = ["about us", "our work", "our clients", "our team", "contact us"];
+const navItems = ["home", "movies", "collections", "new releases", "contact"];
 
 function LanguageSwitch({ language, onSwitch, className = "" }) {
   return (
@@ -14,7 +12,7 @@ function LanguageSwitch({ language, onSwitch, className = "" }) {
       type="button"
       onClick={onSwitch}
       aria-label={`Switch language to ${language === "DE" ? "English" : "German"}`}
-      className={`relative grid grid-cols-2 rounded-full border border-white/20 bg-white/5 p-1 text-xs transition-colors duration-300 hover:border-cyan-400/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400 ${className}`}
+      className={`relative grid cursor-pointer grid-cols-2 rounded-full border border-white/20 bg-white/5 p-1 text-xs transition-colors duration-300 hover:border-cyan-400/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400 ${className}`}
     >
       <span
         aria-hidden="true"
@@ -54,15 +52,21 @@ export default function Navbar() {
   return (
     <nav className="relative z-50 bg-black py-4 lg:pb-0 lg:pt-8">
       <Container className="flex items-center justify-between">
-        <Link href="/" aria-label="Mindspace home" className="shrink-0">
-          <Image
-            src={logo}
-            alt="Mindspace"
-            width={80}
-            height={80}
-            priority
-            className="h-16 w-16 object-contain sm:h-20 sm:w-20"
-          />
+        <Link
+          href="/"
+          aria-label="Cineora home"
+          className="flex shrink-0 items-center gap-2 text-xl font-extrabold tracking-[-0.04em] text-white sm:text-2xl"
+        >
+          <span className="grid h-9 w-9 place-items-center rounded-full border border-cyan-400 text-cyan-400">
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              className="ml-0.5 h-4 w-4 fill-current"
+            >
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </span>
+          cineora
         </Link>
 
         <div className="hidden items-center gap-8 text-sm text-white lg:flex">
@@ -70,9 +74,9 @@ export default function Navbar() {
             <a
               key={item}
               href="#"
-              className={`transition hover:text-cyan-400 ${
-                item === "our work"
-                  ? "border-b-2 border-cyan-400 pb-1 text-cyan-400"
+              className={`relative pb-3 transition hover:text-cyan-400 ${
+                item === "movies"
+                  ? "font-bold text-white after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-11 after:-translate-x-1/2 after:rounded-full after:bg-cyan-400 hover:text-white"
                   : ""
               }`}
             >
@@ -92,7 +96,7 @@ export default function Navbar() {
           aria-controls="mobile-navigation"
           aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
           onClick={() => setMenuOpen((open) => !open)}
-          className="relative flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-cyan-400 hover:text-cyan-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400 lg:hidden"
+          className="relative flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-cyan-400 hover:text-cyan-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400 lg:hidden"
         >
           <span
             className={`absolute h-0.5 w-5 rounded-full bg-current transition-transform duration-300 ${
@@ -124,7 +128,9 @@ export default function Navbar() {
                 href="#"
                 onClick={() => setMenuOpen(false)}
                 className={`w-full border-b border-white/10 pb-3 transition hover:text-cyan-400 ${
-                  item === "our work" ? "text-cyan-400" : ""
+                  item === "movies"
+                    ? "relative font-bold text-white after:absolute after:bottom-1 after:left-0 after:h-1 after:w-11 after:rounded-full after:bg-cyan-400 hover:text-white"
+                    : ""
                 }`}
               >
                 {item}
