@@ -75,7 +75,7 @@ export default async function AboutUsPage() {
             </Link>
           </Container>
         </main>
-        <Footer />
+        <Footer showAccent={false} />
       </div>
     );
   }
@@ -139,12 +139,12 @@ export default async function AboutUsPage() {
                   dangerouslySetInnerHTML={{ __html: story.details.text }}
                 />
                 {story.details.cta_text && (
-                  <a
+                  <Link
                     href="/#work"
                     className="mt-9 inline-flex rounded-lg bg-[#ff414d] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#ff5b66]"
                   >
                     {story.details.cta_text}
-                  </a>
+                  </Link>
                 )}
               </div>
             </Container>
@@ -192,7 +192,7 @@ export default async function AboutUsPage() {
         )}
       </main>
 
-      <Footer />
+      <Footer showAccent={false} />
     </div>
   );
 }

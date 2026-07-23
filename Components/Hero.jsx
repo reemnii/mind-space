@@ -1,6 +1,16 @@
 import Container from "@/Components/Container";
 
-export default function Hero() {
+const defaultLines = [
+  "we turn bold ideas",
+  "into unforgettable films.",
+  "where dreams come",
+];
+
+export default function Hero({
+  lines = defaultLines,
+  accentText = "to",
+  emphasisText = "life",
+}) {
   return (
     <section className="relative w-full overflow-hidden bg-black py-8 sm:py-10 md:py-24">
       <Container className="relative flex min-h-[clamp(300px,58vw,420px)] flex-col items-center justify-center text-center md:min-h-[60vh]">
@@ -60,9 +70,11 @@ export default function Hero() {
         <div className="relative z-10 w-full max-w-4xl px-1 sm:px-4">
 
           <h1 className="font-[family-name:var(--font-inter)] text-[clamp(2rem,8.5vw,3.75rem)] font-thin leading-[1.15] tracking-[-0.035em] text-white">
-            <span className="block">we turn bold ideas</span>
-            <span className="block">into unforgettable films.</span>
-            <span className="block">where dreams come</span>
+            {lines.map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
           </h1>
 
 
@@ -76,8 +88,8 @@ export default function Hero() {
             </span>
 
             <h2 className="whitespace-nowrap font-[family-name:var(--font-inter)] text-[clamp(2rem,8vw,4.5rem)] font-extrabold leading-none tracking-[-0.045em]">
-              <span className="text-[#ff4a5c] ">to</span>{" "}
-              <span className="text-white">life</span>
+              <span className="text-[#ff4a5c] ">{accentText}</span>{" "}
+              <span className="text-white">{emphasisText}</span>
             </h2>
 
             <span

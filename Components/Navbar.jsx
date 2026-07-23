@@ -8,7 +8,7 @@ import Container from "@/Components/Container";
 const navItems = [
   { label: "our story", href: "/about-us" },
   { label: "our work", href: "/#work" },
-  { label: "news", href: "https://hanzofilms.com/blogs" },
+  { label: "news", href: "/news" },
   { label: "directors", href: "https://hanzofilms.com/directors" },
   { label: "contact", href: "/#contact" },
 ];
@@ -83,6 +83,7 @@ export default function Navbar() {
           {navItems.map(({ label, href }) => {
             const isActive =
               (pathname === "/about-us" && label === "our story") ||
+              (pathname === "/news" && label === "news") ||
               (pathname === "/" && label === "our work");
 
             return (
@@ -140,6 +141,7 @@ export default function Navbar() {
             {navItems.map(({ label, href }) => {
               const isActive =
                 (pathname === "/about-us" && label === "our story") ||
+                (pathname === "/news" && label === "news") ||
                 (pathname === "/" && label === "our work");
 
               return (

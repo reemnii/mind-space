@@ -5,17 +5,19 @@ const sitemapLinks = [
   ["home", "/"],
   ["our work", "/#work"],
   ["our story", "/about-us"],
-  ["news", "https://hanzofilms.com/blogs"],
+  ["news", "/news"],
   ["contact", "/#contact"],
 ];
 
 const locations = ["Dubai, UAE", "Mumbai, India", "Singapore"];
 
-export default function Footer() {
+export default function Footer({ showAccent = true }) {
   return (
     <footer>
       <div className="relative h-20 bg-black" aria-hidden="true">
-        <span className="absolute left-[53.7%] top-3 h-1 w-1 rounded-full bg-[#00d9ff] shadow-[0_0_4px_rgba(0,217,255,0.65)]" />
+        {showAccent && (
+          <span className="absolute left-[53.7%] top-3 h-1 w-1 rounded-full bg-[#00d9ff] shadow-[0_0_4px_rgba(0,217,255,0.65)]" />
+        )}
       </div>
 
       <div className="bg-[#ff414d] text-white">
